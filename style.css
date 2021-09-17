@@ -131,6 +131,34 @@ font-size: 36px;
 color: white;
 }
 
+.trans-box1{
+    width: 416px;
+height: 140px;
+background: var(--white) 0% 0% no-repeat padding-box;
+position: absolute;
+border-radius: 10px;
+opacity: 0.71;
+z-index: -1;
+    top: 3rem;
+}
+
+.trans-box2{
+    width: 379px;
+    height: 130px;
+    
+    background: var(--white) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    opacity: 0.22;
+z-index: -2;
+    top: 4.3rem;
+    position: absolute;
+}
+
+
+
+
+
+
 .box-1-times{
     width: 566px;
 height: 300px;
@@ -405,6 +433,28 @@ margin-bottom: 1rem;
 .body{
     margin: 0;
 }
+
+.trans-box1{
+    width: 305px;
+    height: 129px;
+    
+  
+    top: 9rem;
+}
+
+.trans-box2{
+    
+    width: 276px;
+    height: 130px;
+    top: 9.5rem;
+}
+
+
+
+
+
+
+
 }
 
 
