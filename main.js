@@ -36,10 +36,10 @@ function time() {
   var m = d.getMinutes();
   var h = d.getHours();
    
-     hourTime.innerHTML =   `${concatZero((h % 12) || 12)}`
-     minTime.innerHTML =   ` ${concatZero(m)}`
-     secTime.innerHTML =    `${concatZero(s)}`
-     aMpM.innerHTML=`${h >= 12 ? 'PM' : 'AM'}`
+     hourTime.innerHTML =    `${concatZero((h % 12) || 12)}`
+     minTime.innerHTML  =    ` ${concatZero(m)}`
+     secTime.innerHTML  =    `${concatZero(s)}`
+     aMpM.innerHTML     =    `${h >= 12 ? 'PM' : 'AM'}`
 }
 setInterval(time, 1000);
 // clock section end
