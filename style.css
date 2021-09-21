@@ -73,8 +73,7 @@ body{
 
 .time-container{
     margin-left: 4rem;
-    top: 42px;
-    left: 706px;
+  
     width: 536px;
     height: 130px;
     background: var(--white) 0% 0% no-repeat padding-box;
@@ -265,7 +264,10 @@ justify-content: center;
 
 }
 
-
+.wish-button:hover{
+  
+background: transparent linear-gradient(-113deg, #6E54EC 0%, #CB52F8 40%, #FC5EFF 81%, #F1A7C5 100%) 0% 0% no-repeat padding-box;
+}
 
 
 
@@ -436,14 +438,11 @@ margin-bottom: 1rem;
 
 .trans-box1{
     width: 305px;
-    height: 129px;
-    
-  
+    height: 129px;    
     top: 9rem;
 }
 
-.trans-box2{
-    
+.trans-box2{    
     width: 276px;
     height: 130px;
     top: 9.5rem;
