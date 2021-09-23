@@ -93,7 +93,36 @@ partyBtn.addEventListener("click", ()=>{
 
 
 
+//time slot - morning
+const morningSlot = document.querySelector('.morning-slot');
 
+morningSlot.addEventListener("click", ()=>{
+
+  mssgUpdate.innerText ="Wake UP!";
+  wishHeading.innerText ="Good Morning!!";
+  themeIMG.style.backgroundImage = "url('./Sunny day-bro.svg')"
+
+});
+//time slot - noon
+const noonSlot = document.querySelector('.noon-slot');
+
+noonSlot.addEventListener("click", ()=>{
+
+  mssgUpdate.innerText ="Have Some Food!!";
+  wishHeading.innerText ="Good Afternoon!!";
+  themeIMG.style.backgroundImage = "url('./Pizza sharing-cuate.svg')";
+
+});
+//time slot-night
+const nightSlot = document.querySelector('.night-slot');
+
+nightSlot.addEventListener("click", ()=>{
+
+  mssgUpdate.innerText ="Take A Nap or just sleep bhai!!";
+  wishHeading.innerText ="Good Night!!";
+  themeIMG.style.backgroundImage = "url('./Sleep analysis-cuate.svg')";
+
+});
 
 
 
