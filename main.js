@@ -77,7 +77,7 @@ if(hr>=5 && hr<12){
    
   }else{
     
-      mssgUpdate.innerText ="JO KArna HAi KAr bsdk";
+      mssgUpdate.innerText ="JO KArna HAi KAro";
       wishHeading.innerText ="Chill Karo";
       themeIMG.style.backgroundImage = "url('./chill.svg')";
 
