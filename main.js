@@ -38,28 +38,42 @@ const wishHeading = document.querySelector('.wish');
 var d = new Date();
 var hr = d.getHours();
 
+//function for morning 
+function morning(){
+  mssgUpdate.innerText ="Wake UP!";
+  wishHeading.innerText ="Good Morning!!";
+  themeIMG.style.backgroundImage = "url('./Sunny day-bro.svg')";
+}
+
+//function for noon 
+function noonAfter(){
+  mssgUpdate.innerText ="Have Some Food!!";
+      wishHeading.innerText ="Good Afternoon!!";
+      themeIMG.style.backgroundImage = "url('./Pizza sharing-cuate.svg')";
+}
+
+//function for night 
+function nightFun(){
+mssgUpdate.innerText ="Take A Nap or just sleep bhai!!";
+wishHeading.innerText ="Good Night!!";
+themeIMG.style.backgroundImage = "url('./Sleep analysis-cuate.svg')";
+}
+
+
 
 function realTimeFun(){
 
-
-
 if(hr>=5 && hr<12){  
 
-      mssgUpdate.innerText ="Wake UP!";
-      wishHeading.innerText ="Good Morning!!";
-      themeIMG.style.backgroundImage = "url('./Sunny day-bro.svg')";
+  morning();
 
   }else if(hr>=12 && hr<18){
   
-      mssgUpdate.innerText ="Have Some Food!!";
-      wishHeading.innerText ="Good Afternoon!!";
-      themeIMG.style.backgroundImage = "url('./Pizza sharing-cuate.svg')";
+    noonAfter();
 
   }else if(hr>=18 && hr<24){
   
-        mssgUpdate.innerText ="Take A Nap or just sleep bhai!!";
-        wishHeading.innerText ="Good Night!!";
-        themeIMG.style.backgroundImage = "url('./Sleep analysis-cuate.svg')";
+       nightFun();
    
   }else{
     
@@ -76,9 +90,9 @@ const partyBtn = document.querySelector('.wish-button');
 
 
 partyBtn.addEventListener("click", ()=>{
-      partyBtn.innerHTML ="End Pawwry";
+      partyBtn.innerHTML ="Double Click to End Pawwry";
       mssgUpdate.innerText ="Hamari Pawwry Hori Hai!!";
-      wishHeading.innerText ="let's Party";
+      wishHeading.innerText ="Let's Pawwryy";
       themeIMG.style.backgroundImage = "url('./party2.svg')";
 });
 
@@ -98,29 +112,28 @@ const morningSlot = document.querySelector('.morning-slot');
 
 morningSlot.addEventListener("click", ()=>{
 
-  mssgUpdate.innerText ="Wake UP!";
-  wishHeading.innerText ="Good Morning!!";
-  themeIMG.style.backgroundImage = "url('./Sunny day-bro.svg')"
+  morning();
 
 });
+
 //time slot - noon
 const noonSlot = document.querySelector('.noon-slot');
 
 noonSlot.addEventListener("click", ()=>{
 
-  mssgUpdate.innerText ="Have Some Food!!";
-  wishHeading.innerText ="Good Afternoon!!";
-  themeIMG.style.backgroundImage = "url('./Pizza sharing-cuate.svg')";
+  noonAfter();
 
 });
+
 //time slot-night
 const nightSlot = document.querySelector('.night-slot');
 
 nightSlot.addEventListener("click", ()=>{
 
-  mssgUpdate.innerText ="Take A Nap or just sleep bhai!!";
-  wishHeading.innerText ="Good Night!!";
-  themeIMG.style.backgroundImage = "url('./Sleep analysis-cuate.svg')";
+
+
+  nightFun();
+
 
 });
 
