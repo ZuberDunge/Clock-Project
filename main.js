@@ -118,21 +118,46 @@ partyBtn.addEventListener("dblclick", ()=>{
 
 //time slot - morning
 const morningSlot = document.querySelector('.morning-slot');
-morningSlot.addEventListener("change", ()=>{
-  morning();
+
+
+morningSlot.addEventListener("change", function (){ 
+
+    if(this.value==="defaultvalue"){
+      realTimeFun();
+      console.log(this.value);
+    }
+    else{
+        morning();
+    }
+
 });
+
 
 //time slot - noon
 const noonSlot = document.querySelector('.noon-slot');
-noonSlot.addEventListener("change", ()=>{
-  noonAfter();
+noonSlot.addEventListener("change", function (){
+  if(this.value==="defaultvalue"){
+    realTimeFun();
+    console.log(this.value);
+  }
+  else{
+    noonAfter();
+    console.log(this.value);}
+
 });
 
 //time slot-night
 const nightSlot = document.querySelector('.night-slot');
 
-nightSlot.addEventListener("change", ()=>{
-  nightFun();
+nightSlot.addEventListener("change", function (){
+
+  if(this.value==="defaultvalue"){
+    realTimeFun();
+    console.log(this.value);
+  }
+  else{
+  nightFun();}
+
 });
 
 
