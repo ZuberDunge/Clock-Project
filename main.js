@@ -83,14 +83,12 @@ if(hr>=5 && hr<12){
 
   morning();
 
-  }else if(hr>=12 && hr<18){
-  
+  }else if(hr>=12 && hr<18){  
+    
     noonAfter();
 
-  }else if(hr>=18 && hr<24){
-  
-       nightFun();
-   
+  }else if(hr>=18 && hr<24){  
+       nightFun();   
   }else{
     
       mssgUpdate.innerText ="JO KArna HAi KAro";
@@ -114,11 +112,8 @@ partyBtn.addEventListener("click", ()=>{
 
 partyBtn.addEventListener("dblclick", ()=>{
     partyBtn.innerHTML ="Let's Pawwry";
-    realTimeFun();
-    
-  });
-
-
+    realTimeFun();    
+});
 
 
 //time slot - morning
