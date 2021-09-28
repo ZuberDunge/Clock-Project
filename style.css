@@ -135,6 +135,8 @@ body{
     opacity: 0.22;
     z-index: -2;
     top: 4.3rem;
+
+
     position: absolute;
 }
 
@@ -159,7 +161,6 @@ body{
     position: relative;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 100%;
 }
 
 
@@ -350,7 +351,7 @@ select{
 .box-2-image{
     width: 350px;
     padding: 1rem;
-    height: 500px;;
+    height: 400px;;
     margin: auto;
 
 }
