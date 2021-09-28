@@ -32,7 +32,7 @@ setInterval(time, 1000);
 const mssgUpdate = document.querySelector('#mssg');
 const themeIMG = document.querySelector('.box-2-image');
 const wishHeading = document.querySelector('.wish');
-
+const checkE = document.getElementById('check');
 
 //img change according to time
 var d = new Date();
@@ -58,6 +58,22 @@ mssgUpdate.innerText ="Take A Nap or just sleep bhai!!";
 wishHeading.innerText ="Good Night!!";
 themeIMG.style.backgroundImage = "url('./Sleep analysis-cuate.svg')";
 }
+
+
+// checkE.addEventListener("click",()=>{
+//   if(checkE.value == "9AM"){
+//     console.log("hey there")
+//   }
+// else{
+//   console.log("nhi horhja")
+// }
+// });
+
+// console.log(checkE)
+
+
+
+
 
 
 
@@ -93,11 +109,10 @@ partyBtn.addEventListener("click", ()=>{
       partyBtn.innerHTML ="Double Click to End Pawwry";
       mssgUpdate.innerText ="Hamari Pawwry Hori Hai!!";
       wishHeading.innerText ="Let's Pawwryy";
-      themeIMG.style.backgroundImage = "url('./party2.svg')";
+      themeIMG.style.backgroundImage = "url(./party2.svg)";
 });
 
-
-  partyBtn.addEventListener("dblclick", ()=>{
+partyBtn.addEventListener("dblclick", ()=>{
     partyBtn.innerHTML ="Let's Pawwry";
     realTimeFun();
     
@@ -106,35 +121,23 @@ partyBtn.addEventListener("click", ()=>{
 
 
 
-
 //time slot - morning
 const morningSlot = document.querySelector('.morning-slot');
-
-morningSlot.addEventListener("click", ()=>{
-
+morningSlot.addEventListener("change", ()=>{
   morning();
-
 });
 
 //time slot - noon
 const noonSlot = document.querySelector('.noon-slot');
-
-noonSlot.addEventListener("click", ()=>{
-
+noonSlot.addEventListener("change", ()=>{
   noonAfter();
-
 });
 
 //time slot-night
 const nightSlot = document.querySelector('.night-slot');
 
-nightSlot.addEventListener("click", ()=>{
-
-
-
+nightSlot.addEventListener("change", ()=>{
   nightFun();
-
-
 });
 
 

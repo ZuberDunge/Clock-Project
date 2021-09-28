@@ -2,12 +2,12 @@
     /* Colors: */
     --bg-color-dark: #3D087B;
     --light-blue: #8E53F0;
-   --light-white: #F6E2FF;
+    --light-white: #F6E2FF;
     --light: #EDEDED;
     --white: #FFFFFF;
     --light-blue-primary: #8A11BF;
     --dark-light-blue: #5F0089;
-}  
+}
     
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
@@ -15,8 +15,9 @@
 *{
     box-sizing: border-box;
 }
+
 @font-face {
-     font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     src: url("./fonts/BauhausHeavyBT.woff") format("woff"), url("./fonts/BauhausHeavyBT.woff2") format("woff2");
 }
 
@@ -389,12 +390,6 @@ select{
     height: 130px;
     top: 9.5rem;
 }
-
-
-
-
-
-
 
 }
 
