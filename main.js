@@ -32,7 +32,8 @@ setInterval(time, 1000);
 const mssgUpdate = document.querySelector('#mssg');
 const themeIMG = document.querySelector('.box-2-image');
 const wishHeading = document.querySelector('.wish');
-const checkE = document.getElementById('check');
+const wishHeadingBox = document.querySelector('.wish-heading');
+
 
 //img change according to time
 var d = new Date();
@@ -41,6 +42,7 @@ var hr = d.getHours();
 //function for morning 
 function morning(){
   mssgUpdate.innerText ="Wake UP!";
+  wishHeadingBox.style.display="block";
   wishHeading.innerText ="Good Morning!!";
   themeIMG.style.backgroundImage = "url('./Sunny day-bro.svg')";
 }
@@ -48,6 +50,7 @@ function morning(){
 //function for noon 
 function noonAfter(){
   mssgUpdate.innerText ="Have Some Food!!";
+  wishHeadingBox.style.display="block";
       wishHeading.innerText ="Good Afternoon!!";
       themeIMG.style.backgroundImage = "url('./Pizza sharing-cuate.svg')";
 }
@@ -55,11 +58,107 @@ function noonAfter(){
 //function for night 
 function nightFun(){
 mssgUpdate.innerText ="Take A Nap or just sleep bhai!!";
+wishHeadingBox.style.display="block";
 wishHeading.innerText ="Good Night!!";
 themeIMG.style.backgroundImage = "url('./Sleep analysis-cuate.svg')";
 }
+function chillKaro(){
+  mssgUpdate.innerText ="Jo Karna Hai Karo";
+    wishHeading.innerText ="";
+    wishHeadingBox.style.display="none";
+    themeIMG.style.backgroundImage = "url('./chill.svg')";
+  }
+  chillKaro();
 
 
+
+//party btn
+const partyBtn = document.querySelector('.wish-button');
+
+
+partyBtn.addEventListener("click", ()=>{
+      partyBtn.innerHTML ="Double Click to End Pawwry";
+      mssgUpdate.innerText ="Hamari Pawwry Hori Hai!!";
+      wishHeading.innerText ="Let's Pawwryy";
+      themeIMG.style.backgroundImage = "url(./party2.svg)";
+});
+
+partyBtn.addEventListener("dblclick", ()=>{
+    partyBtn.innerHTML ="Let's Pawwry";
+    chillKaro()    
+});
+
+
+
+//time slot - morning
+const morningSlot = document.querySelector('.morning-slot');
+
+
+
+morningSlot.addEventListener("change", function (){ 
+
+
+  console.log(hr);
+  console.log(this.value);
+
+  if (this.value==hr) {    
+      morning();}
+
+   else{
+    mssgUpdate.innerText ="Jo Karna Hai Karo";
+    wishHeadingBox.style.display="none";
+
+
+
+    themeIMG.style.backgroundImage = "url('./chill.svg')";
+   }
+
+});
+
+
+//time slot - noon
+const noonSlot = document.querySelector('.noon-slot');
+noonSlot.addEventListener("change", function (){
+  if (this.value==hr) {    
+   noonAfter();}
+
+ else{
+  mssgUpdate.innerText ="Jo Karna Hai Karo";
+  wishHeading.innerText ="";
+  wishHeadingBox.style.display="none";
+  themeIMG.style.backgroundImage = "url('./chill.svg')";
+ }
+
+});
+
+//time slot-night
+const nightSlot = document.querySelector('.night-slot');
+
+nightSlot.addEventListener("change", function (){
+  if (this.value==hr) {    
+    nightFun();}
+
+ else{
+  mssgUpdate.innerText ="Jo Karna Hai Karo";
+  wishHeading.innerText ="";
+  wishHeadingBox.style.display="none";
+  themeIMG.style.backgroundImage = "url('./chill.svg')";
+ }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+// kachra 
+// const checkE = document.getElementById('check');
 // checkE.addEventListener("click",()=>{
 //   if(checkE.value == "9AM"){
 //     console.log("hey there")
@@ -77,89 +176,24 @@ themeIMG.style.backgroundImage = "url('./Sleep analysis-cuate.svg')";
 
 
 
-function realTimeFun(){
+// function realTimeFun(){
 
-if(hr>=5 && hr<12){  
+// if(hr>=5 && hr<12){  
 
-  morning();
+//   morning();
 
-  }else if(hr>=12 && hr<18){  
+//   }else if(hr>=12 && hr<18){  
     
-    noonAfter();
+//     noonAfter();
 
-  }else if(hr>=18 && hr<24){  
-       nightFun();   
-  }else{
+//   }else if(hr>=18 && hr<24){  
+//        nightFun();   
+//   }else{
     
-      mssgUpdate.innerText ="JO KArna HAi KAro";
-      wishHeading.innerText ="Chill Karo";
-      themeIMG.style.backgroundImage = "url('./chill.svg')";
+//       mssgUpdate.innerText ="Jo Karna Hai Karo";
+//       wishHeading.innerText ="Chill Karo";
+//       themeIMG.style.backgroundImage = "url('./chill.svg')";
 
-  }
-};
-realTimeFun();
-//party btn
-
-const partyBtn = document.querySelector('.wish-button');
-
-
-partyBtn.addEventListener("click", ()=>{
-      partyBtn.innerHTML ="Double Click to End Pawwry";
-      mssgUpdate.innerText ="Hamari Pawwry Hori Hai!!";
-      wishHeading.innerText ="Let's Pawwryy";
-      themeIMG.style.backgroundImage = "url(./party2.svg)";
-});
-
-partyBtn.addEventListener("dblclick", ()=>{
-    partyBtn.innerHTML ="Let's Pawwry";
-    realTimeFun();    
-});
-
-
-//time slot - morning
-const morningSlot = document.querySelector('.morning-slot');
-
-
-morningSlot.addEventListener("change", function (){ 
-
-    if(this.value==="defaultvalue"){
-      realTimeFun();
-      console.log(this.value);
-    }
-    else{
-        morning();
-    }
-
-});
-
-
-//time slot - noon
-const noonSlot = document.querySelector('.noon-slot');
-noonSlot.addEventListener("change", function (){
-  if(this.value==="defaultvalue"){
-    realTimeFun();
-    console.log(this.value);
-  }
-  else{
-    noonAfter();
-    console.log(this.value);}
-
-});
-
-//time slot-night
-const nightSlot = document.querySelector('.night-slot');
-
-nightSlot.addEventListener("change", function (){
-
-  if(this.value==="defaultvalue"){
-    realTimeFun();
-    console.log(this.value);
-  }
-  else{
-  nightFun();}
-
-});
-
-
-
-
+//   }
+// };
+// realTimeFun();
